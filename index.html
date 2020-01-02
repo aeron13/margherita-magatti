@@ -80,12 +80,19 @@ $( document ).ready(function() {
 });
 
 
-//hover effetti
+// ---- EFFETTI HOVER ----
 
 //code enthusiast
-  $("#c-e").on("mouseover", function() {
+var controlCe = 0;
 
+  $("#c-e").mouseover(function() {
+    if(controlCe == 0) {
+      var games = "<div id='games' class='links'></div>"
+      $("#c-e").append(games);
+      controlCe = 1;
+    }
   })
+
 
 
 
