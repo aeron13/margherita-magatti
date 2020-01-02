@@ -1,0 +1,252 @@
+@media only screen and (min-width: 768px){
+
+  #prova {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+
+  }
+
+  #wrapper-1 {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+
+  }
+
+  #wrapper-2 {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+  }
+
+  #lifeline {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    height: 70%;
+    width: 86%;
+    background-image: url("./img/lifeline.svg");
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #hi {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    height: 60%;
+    background-image: url("./img/hi.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #im {
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 30%;
+    width: 10%;
+    height: 25%;
+    background-image: url("./img/im.svg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #nome {
+    display: none;
+    position: fixed;
+    top: 42%;
+    left: 27%;
+    width: 45%;
+    height: 25%;
+    background-image: url("./img/nome.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #g-d-wrapper {
+    display: none;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 42%;
+    height: 100vh;
+  }
+
+  #g-d {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    width: 30%;
+    height: 10%;
+    background-image: url("./img/g-d.svg");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  #freccia {
+    display: none;
+    position: absolute;
+    bottom: 0%;
+    left: 200%;
+    width: 50%;
+    height: 40%;
+    transform: translateY(-10px);
+    background-image: url("./img/freccia.svg");
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+
+  #n-l {
+    display: none;
+    border: 1px solid black;
+    position: absolute;
+    top: 75%;
+    left: 90%;
+    width: 400%;
+    height: 100%;
+    background-image: url("./img/n-l2.png");
+    background-position: right bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(-100%, -100%);
+    cursor: pointer;
+  }
+
+  #c-e {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    left: 49%;
+    width: 20%;
+    height: 10%;
+    background-image: url("./img/c-e.svg");
+    background-position: left bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  #wrapper-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  #hi {
+    display: none;
+    position: absolute;
+    top: 30vh;
+    left: 0%;
+    width: 100%;
+    height: 40%;
+    background-image: url("./img/hi.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #im {
+    display: none;
+    position: absolute;
+    top: 20vh;
+    left: 10%;
+    width: 30%;
+    height: 20%;
+    background-image: url("./img/im.svg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 90;
+  }
+
+  #nome {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 2.5%;
+    width: 90%;
+    height: 18%;
+    background-image: url("./img/nome-mobile.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 99;
+  }
+
+  #g-d-wrapper {
+    display: none;
+    background-color: black;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 55%;
+    height: 80%;
+  }
+
+  #g-d {
+    position: absolute;
+    top: 65%;
+    left: 8%;
+    width: 50%;
+    height: 10%;
+    background-image: url("./img/g-d.svg");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #n-l {
+    display: none;
+    border: 1px solid black;
+    position: absolute;
+    top: 25%;
+    left: -33.3%;
+    width: 200%;
+    height: 100%;
+    background-image: url("./img/n-l-mobile.png");
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #c-e {
+    display: none;
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    width: 50%;
+    height: 5vh;
+    background-image: url("./img/c-e-mobile.svg");
+    background-position: left bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

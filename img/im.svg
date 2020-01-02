@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="193.5" height="193.5" viewBox="0 0 193.5 193.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        font-size: 71.48px;
+        font-family: CenturyStd-LightItalic, ITC Century Std;
+        font-weight: 300;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <title>Risorsa 2</title>
+  <g id="Livello_2" data-name="Livello 2">
+    <g id="i_m" data-name="i&apos;m">
+      <rect class="cls-1" x="0.5" y="0.5" width="192.5" height="192.5"/>
+      <text class="cls-2" transform="matrix(1, 0, 0, 1, 45.43, 116.11)">I’m</text>
+    </g>
+  </g>
+</svg>

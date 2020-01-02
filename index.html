@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Margherita Magatti</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./homepagestyle.css">
+
+</head>
+
+
+<body>
+
+    <div id="wrapper-1">
+
+      <div id="hi">
+      </div>
+      <div id="im">
+        <div id="n-l">
+        </div>
+      </div>
+      <div id="g-d-wrapper">
+        <div id="g-d">
+          <div id="freccia">
+          </div>
+        </div>
+      </div>
+      <div id="nome">
+      </div>
+      <div id="c-e">
+      </div>
+    </div>
+
+    <div id="wrapper-2">
+      <div id="lifeline">
+      </div>
+    </div>
+
+    <div id="prova">
+
+    </div>
+
+</body>
+
+<script>
+
+var iControl = 0;
+var timer;
+var st;
+
+//controlla l'apparsa degli elementi dell'intro
+function intro() {
+
+  if (iControl == 0) {
+    $("#hi").fadeIn(0)
+  } else if (iControl == 1) {
+      $("#im").fadeIn(0)
+    } else if (iControl == 2) {
+        $("#nome").fadeIn(0)
+      } else if (iControl == 3) {
+          $("#g-d-wrapper").fadeIn(200)
+        } else if (iControl == 4) {
+            $("#n-l").fadeIn(0)
+          } else if (iControl == 5) {
+              $("#c-e").fadeIn(0)
+            } else if (iControl == 6) {
+              $("#freccia").fadeIn(0)
+              clearTimeout(timer)
+              }
+    iControl = iControl + 1;
+  timer = setTimeout(intro, 500);
+}
+
+$( document ).ready(function() {
+    intro();
+});
+
+
+//hover effetti
+
+//code enthusiast
+  $("#c-e").on("mouseover", function() {
+
+  })
+
+
+
+// ---- EVENTI ALLO SCROLL ----
+
+var control = 0;
+var tempoScorrim = 1000;
+
+jQuery(document).ready(function(){
+    function desktopOnly(){
+        var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth;
+        if(width > 768){
+
+          // ---  solo su desktop ---
+
+          $(document).scroll(function(event){
+             st = $(this).scrollTop();
+             if(st > 100) {
+
+               if(control == 0) {
+                 // --- compare la lifeline ---
+                 horScrollSx()
+               }
+             } else if(st < 400) {
+               if(control == 1) {
+                 // --- scompare la lifeline ---
+                 horScrollDx()
+               }
+             }
+          });
+        } else {
+          // ---  solo su mobile ---
+
+        }
+    }
+    window.onresize = desktopOnly;
+    desktopOnly();
+});
+
+// --- compare la lifeline ---
+function horScrollSx() {
+  $("#hi").animate({left: "-95%"}, tempoScorrim)
+  $("#im").animate({left: "-90%"}, tempoScorrim)
+  $("#nome").animate({left: "-73%"}, tempoScorrim)
+  $("#g-d-wrapper").animate({right: "100%"}, tempoScorrim)
+  $("#c-e").animate({left: "-51%"}, tempoScorrim)
+  $("#wrapper-2").animate({left: "0%"}, tempoScorrim)
+  control = 1;
+}
+
+// --- scompare la lifeline ---
+function horScrollDx() {
+  $("#hi").animate({left: "30%"}, tempoScorrim)
+  $("#im").animate({left: "30%"}, tempoScorrim)
+  $("#nome").animate({left: "27%"}, tempoScorrim)
+  $("#g-d-wrapper").animate({right: "0%"}, tempoScorrim)
+  $("#c-e").animate({left: "49%"}, tempoScorrim)
+  $("#wrapper-2").animate({left: "100%"}, tempoScorrim)
+  control = 0;
+}
+
+$("#freccia").click(function() {
+  if(control == 0) {
+
+    horScrollSx();
+    st = 450;
+  }
+})
+
+
+</script>
+
+
+</html>

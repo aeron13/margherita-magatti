@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="616.07" height="643" viewBox="0 0 616.07 643">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1884aa;
+      }
+    </style>
+  </defs>
+  <title>Risorsa 1</title>
+  <g id="Livello_2" data-name="Livello 2">
+    <g id="hi">
+      <g>
+        <rect class="cls-1" width="455.21" height="643"/>
+        <path d="M409.51,530.79h-115V358.14h-133V530.79h-115V107.28h115v157h133v-157h115Z"/>
+        <path d="M501.07,530.79V107.28h115V530.79Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
