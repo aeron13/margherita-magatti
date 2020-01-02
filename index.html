@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Margherita Magatti</title>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="jquery-ui.min.js"></script>
 <link rel="stylesheet" type="text/css" href="./homepagestyle.css">
@@ -48,6 +48,8 @@
 
 <script>
 
+// ---- INTRO ----
+
 var iControl = 0;
 var timer;
 var st;
@@ -80,22 +82,6 @@ $( document ).ready(function() {
 });
 
 
-// ---- EFFETTI HOVER ----
-
-//code enthusiast
-var controlCe = 0;
-
-  $("#c-e").mouseover(function() {
-    if(controlCe == 0) {
-      var games = "<div id='games' class='links'></div>"
-      $("#c-e").append(games);
-      controlCe = 1;
-    }
-  })
-
-
-
-
 // ---- EVENTI ALLO SCROLL ----
 
 var control = 0;
@@ -123,6 +109,43 @@ jQuery(document).ready(function(){
                }
              }
           });
+
+          // ---- EFFETTI HOVER ----
+
+          //code enthusiast
+          var controlCe = 0;
+
+            $("#c-e").mouseover(function() {
+              if(controlCe == 0) {
+                var games = "<div id='games' class='links'></div>"
+                $("#c-e").append(games);
+                controlCe = 1;
+              }
+            })
+
+            //nature lover
+            var controlnl = 0;
+
+              $("#n-l").mouseover(function() {
+                if(controlnl == 0) {
+                  var insta = "<div id='insta' class='links'><h2>Have a look at my landscape photos</h2><a href='https://www.instagram.com/eilesselas13/'>Instagram<div class='arrow'></div></a></div>"
+                  $("#n-l").append(insta);
+                  controlnl = 1;
+                }
+              })
+
+            //graphic designer
+            var controlgd = 0;
+
+              $("#g-d").mouseover(function() {
+                if(controlgd == 0) {
+                  var projects = "<div id='projects' class='links'></div>"
+                  $("#g-d-wrapper").append(projects);
+                  controlgd = 1;
+                }
+              })
+
+              
         } else {
           // ---  solo su mobile ---
 
