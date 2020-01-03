@@ -170,6 +170,7 @@
 
 .links:not(:hover) {
   opacity: 0;
+  transition: 0.3s;
 }
 
 #g-d-wrapper:hover > #projects {
