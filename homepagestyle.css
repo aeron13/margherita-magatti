@@ -110,15 +110,55 @@
   }
 
   #projects {
+    display: inline-block;
     position: absolute;
     top: 45%;
     left: 37.5%;
     height: 20%;
     width: 50%;
-    background-color: red;
-    border: 1px solid white;
   }
 
+  #projects > .linktext {
+    border: 1px solid #fff;
+    background-color: black;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    color: white;
+    cursor: pointer;
+  }
+
+  #projects > .linktext > a {
+    color: inherit;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+
+  #projects > .linktext:hover {
+    background-color: #fff;
+    color: black;
+  }
+
+  #projects > .linktext > .arrow {
+    fill: #000;
+    stroke: #fff;
+    left: 95%;
+  }
+
+  #projects > .linktext:hover > .arrow {
+    fill: #fff;
+    stroke: #000;
+  }
+
+  #projects > p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+  }
 
   #prova {
     position: absolute;
@@ -203,6 +243,7 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
 
   #g-d-wrapper {
