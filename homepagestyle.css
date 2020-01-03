@@ -1,5 +1,6 @@
 @media only screen and (min-width: 768px){
 
+
   h2 {
     color: black;
     font-family: 'Open Sans', sans-serif;
@@ -142,14 +143,14 @@
   }
 
   #projects > .linktext > .arrow {
-    fill: #000;
+    fill: black;
     stroke: #fff;
     left: 95%;
   }
 
   #projects > .linktext:hover > .arrow {
     fill: #fff;
-    stroke: #000;
+    stroke: black;
   }
 
   #projects > p {
@@ -161,6 +162,7 @@
   }
 
   #prova {
+    pointer-events: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -270,20 +272,38 @@
     cursor: pointer;
   }
 
-  #freccia {
+  #frecciaA {
     display: none;
+  }
+
+ .freccia {
     position: absolute;
     bottom: 0%;
-    left: 200%;
-    width: 50%;
-    height: 40%;
-    transform: translateY(-10px);
-    background-image: url("./img/freccia.svg");
-    background-position: right bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
+    left: 230%;
+    width: 40%;
+    height: 30%;
+    transform: translateY(-5px);
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 1px;
     cursor: pointer;
   }
+
+  #frecciaB {
+    /*top: 77%;*/
+    bottom: 10%;
+    left: 5%;
+    width: 5.04%;
+    height: 3%;
+    transform: translateY(0px) scaleX(-1);
+  }
+
+   .freccia:hover {
+      stroke: #EA382A;
+  }
+
+
 
 
   #n-l {
