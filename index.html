@@ -117,8 +117,10 @@ jQuery(document).ready(function(){
 
             $("#c-e").mouseover(function() {
               if(controlCe == 0) {
-                var games = "<div id='games' class='links'></div>"
+                var games = "<div id='games' class='links'><h2>Try out my games!</h2><div class='linktext'><a href='https://walkingthewire.altervista.org/'>WalkingTheWire</a></div><div class='linktext'><a href='https://aeron13.github.io/momotaro/'>Momotaro</a></div></div>"
                 $("#c-e").append(games);
+                var arrow = "<svg width='26.94' height='25.37' viewBox='0 0 26.94 25.37' class='arrow'> <polygon class='cls-1' points='26.24 12.69 14.76 1.21 14.76 6.42 0.5 6.42 0.5 18.95 14.76 18.95 14.76 24.17 26.24 12.69'/> </svg>";
+                $("#games > .linktext").append(arrow);
                 controlCe = 1;
               }
             })
@@ -128,8 +130,10 @@ jQuery(document).ready(function(){
 
               $("#n-l").mouseover(function() {
                 if(controlnl == 0) {
-                  var insta = "<div id='insta' class='links'><h2>Have a look at my landscape photos</h2><a href='https://www.instagram.com/eilesselas13/'>Instagram<div class='arrow'></div></a></div>"
+                  var insta = "<div id='insta' class='links'><h2>Have a look at my landscape photos</h2><div class='linktext'><a href='https://www.instagram.com/eilesselas13/'>Instagram</a></div></div>"
                   $("#n-l").append(insta);
+                  var arrow = "<svg width='26.94' height='25.37' viewBox='0 0 26.94 25.37' class='arrow'> <polygon class='cls-1' points='26.24 12.69 14.76 1.21 14.76 6.42 0.5 6.42 0.5 18.95 14.76 18.95 14.76 24.17 26.24 12.69'/> </svg>";
+                  $("#insta > .linktext").append(arrow);
                   controlnl = 1;
                 }
               })
@@ -145,7 +149,7 @@ jQuery(document).ready(function(){
                 }
               })
 
-              
+
         } else {
           // ---  solo su mobile ---
 
