@@ -190,11 +190,23 @@
   #g-d-wrapper {
     display: none;
     background-color: black;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 55%;
+    height: 75%;
+  }
+
+  #simulator {
+    display: none;
+    transform-origin: left center;
+    background-color: black;
     position: fixed;
     top: 10%;
     right: 0;
     width: 55%;
     height: 75%;
+    z-index: 0;
   }
 
   #g-d {
@@ -235,5 +247,13 @@
     background-position: left bottom;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  hr {
+    background: white;
+    width: 80%;
+    left: 10%;
+    bottom: 10%;
+    position: absolute;
   }
 }
