@@ -1,0 +1,114 @@
+@media only screen and (max-width: 768px) {
+
+  .freccia {
+      display: none;
+      opacity: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #wrapper-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #hi {
+    display: none;
+    position: absolute;
+    top: 30vh;
+    left: 0%;
+    width: 100%;
+    height: 40%;
+    background-image: url("./img/hi.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #im {
+    display: none;
+    position: absolute;
+    top: 20vh;
+    left: 10%;
+    width: 30%;
+    height: 20%;
+    background-image: url("./img/im.svg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 90;
+  }
+
+  #nome {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 2.5%;
+    width: 90%;
+    height: 18%;
+    background-image: url("./img/nome-mobile.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 99;
+  }
+
+  #g-d-wrapper {
+    display: none;
+    background-color: black;
+    position: fixed;
+    top: 10%;
+    right: 0;
+    width: 55%;
+    height: 75%;
+  }
+
+  #g-d {
+    position: absolute;
+    top: 67%;
+    left: 8%;
+    width: 50%;
+    height: 10%;
+    background-image: url("./img/g-d.svg");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #n-l {
+    display: none;
+    border: 1px solid black;
+    position: absolute;
+    top: 25%;
+    left: -33.3%;
+    width: 200%;
+    height: 100%;
+    background-image: url("./img/n-l-mobile.png");
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(-2px);
+  }
+
+  #c-e {
+    display: none;
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    width: 50%;
+    height: 5vh;
+    background-image: url("./img/c-e-mobile.svg");
+    background-position: left bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
