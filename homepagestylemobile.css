@@ -6,11 +6,22 @@
   }
 
   .wrapper {
-    position: relative;
-    top: 0;
+    position: absolute;
     left: 0;
     height: 100vh;
     width: 100%;
+  }
+
+  #wrapper3 {
+    top: 100vh;
+  }
+
+  #wrapper4 {
+    top: 200vh;
+  }
+
+  #wrapper5 {
+    top: 300vh;
   }
 
   #wrapper-1 {
@@ -20,6 +31,120 @@
     height: 100vh;
     width: 100%;
   }
+
+  .linksM {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    padding-bottom: 0.7em;
+    padding-left: 1em;
+    padding-top: 0em;
+  }
+
+  .linktextM {
+    background-color: black;
+    position: relative;
+    border: 1px solid #1884AA;
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    color: white;
+    margin-right: 1.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.2em;
+  }
+
+  #projectsM {
+    top: 60%;
+    height: 30%;
+  }
+
+  #projectsM > .linktextM {
+    border: 1px solid #fff;
+    background-color: black;
+    padding-left: 0.5em;
+    display: inline-block;
+    padding-right: 0.8em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    color: white;
+  }
+
+  #projectsM > .linktextM > a {
+    color: inherit;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+
+  #projectsM > p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+  }
+
+  #projectsM > .linktextM > .arrowM {
+    position: absolute;
+    fill: black;
+    stroke: #fff;
+    transform: translateY(-0.2em);
+    margin-left: 0.4em;
+  }
+
+  #gamesM {
+    top: 50%;
+    width: 70%;
+    border: 1px solid #EA382A;
+    display: inline-block;
+  }
+
+  #gamesM > .linktextM > .arrowM {
+    position: absolute;
+    fill: black;
+    stroke: #EA382A;
+    transform: translateY(-0.2em);
+    left: 95%;
+  }
+  #gamesM > .linktextM {
+    border: 1px solid #EA382A;
+  }
+
+  .linksM > h2 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+
+  .linktextM > a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  #instaM {
+    top: 50%;
+    width: 70%;
+    border: 1px solid #1884AA;
+    display: inline-block;
+  }
+
+  #instaM > .linktextM > .arrowM {
+    fill: black;
+    stroke: #1884AA;
+    position: absolute;
+    transform: translateY(-0.2em);
+    margin-left: 0.5em;
+  }
+
 
   #hi {
     display: none;
