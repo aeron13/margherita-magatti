@@ -9,6 +9,7 @@
 <script type="text/javascript" src="jquery-ui.min.js"></script>
 <link rel="stylesheet" type="text/css" href="./homepagestyle.css">
 <link rel="stylesheet" type="text/css" href="./homepagestylemobile.css">
+<link rel="stylesheet" type="text/css" href="./lifeline.css">
 
 
 </head>
@@ -43,6 +44,33 @@
 
     <div id="wrapper-2">
       <div id="lifeline">
+        <p>2020</p>
+        <p style="left: calc(100/56*15%)">2015</p>
+        <p style="left: calc(100/56*30%)">2010</p>
+        <p style="left: calc(100/56*40%)">2005</p>
+        <p style="left: calc(100/56*50%)">2000</p>
+        <div id="ed" class="container">
+          <div id="ed1" class="quad">Politecnico di Milano</div>
+          <div id="ed2" class="quad">Scientific High School</div>
+          <div id="ed3" class="quad">  </div>
+          <div id="ed4" class="quad">  </div>
+        </div>
+        <div id="lang" class="container">
+          <div id="lang1" class="quad">French</div>
+          <div id="lang2" class="quad">English</div>
+          <div id="lang3" class="quad">German</div>
+        </div>
+        <div id="sport" class="container">
+          <div id="sport1" class="quad">Cycling</div>
+          <div id="sport2" class="quad">Tennis</div>
+          <div id="sport3" class="quad">Hiking</div>
+        </div>
+        <div id="art" class="container">
+          <div id="art1" class="quad">Choir</div>
+          <div id="art2" class="quad">Rock Band</div>
+          <div id="art3" class="quad">Piano</div>
+          <div id="art4" class="quad">Oil painting</div>
+        </div>
       </div>
 
         <svg width="84.04" height="19.35" viewBox="0 0 84.04 19.35" class="freccia" id="frecciaB">
@@ -122,6 +150,21 @@ jQuery(document).ready(function(){
              }
           });
 
+          // ---- LIFELINE ----
+          for(i=0; i<11; i++) {
+            var line1 = "<div class='line' id='l"+i+"' style='left: "+i*(100/56*3)+"%' ></div>";
+            $("#lifeline").append(line1);
+          }
+
+          for(i=2; i<11; i++) {
+              var line2 = "<div class='line' id='l"+Number(i+10)+"' style='left: "+Number(i*(100/56*2)+100/56*28)+"%' ></div>";
+              $("#lifeline").append(line2);
+          }
+
+          for(i=1; i<5; i++) {
+              var line2 = "<div class='line' id='l"+Number(i+21)+"' style='left: "+Number(i*(100/56)+100/56*49)+"%' ></div>";
+              $("#lifeline").append(line2);
+          }
           // ---- EFFETTI HOVER ----
 
           //code enthusiast
@@ -226,6 +269,7 @@ function horScrollSx() {
   $("#c-e").animate({left: "-51%"}, tempoScorrim)
   $("#wrapper-2").animate({left: "0%"}, tempoScorrim)
   control = 1;
+  $("#ed1").delay(tempoScorrim).animate({width: 100/56*13+"%"}, 500)
 }
 
 // --- scompare la lifeline ---
