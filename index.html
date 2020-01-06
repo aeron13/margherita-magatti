@@ -43,6 +43,7 @@
     </div>
 
     <div id="wrapper-2">
+      <div class="linktext">More about me...</div>
       <div id="lifeline">
         <p>2020</p>
         <p style="left: calc(100/56*15%)">2015</p>
@@ -50,22 +51,26 @@
         <p style="left: calc(100/56*40%)">2005</p>
         <p style="left: calc(100/56*50%)">2000</p>
         <div id="ed" class="container">
+          <div id="ed0" class="quad0">Education</div>
           <div id="ed1" class="quad">Politecnico di Milano</div>
           <div id="ed2" class="quad">Scientific High School</div>
           <div id="ed3" class="quad">  </div>
           <div id="ed4" class="quad">  </div>
         </div>
         <div id="lang" class="container">
+          <div id="lang0" class="quad0">Languages</div>
           <div id="lang1" class="quad">French</div>
           <div id="lang2" class="quad">English</div>
           <div id="lang3" class="quad">German</div>
         </div>
         <div id="sport" class="container">
+          <div id="sport0" class="quad0">Sports</div>
           <div id="sport1" class="quad">Cycling</div>
           <div id="sport2" class="quad">Tennis</div>
           <div id="sport3" class="quad">Hiking</div>
         </div>
         <div id="art" class="container">
+          <div id="art0" class="quad0">Music & Art</div>
           <div id="art1" class="quad">Choir</div>
           <div id="art2" class="quad">Rock Band</div>
           <div id="art3" class="quad">Piano</div>
@@ -126,6 +131,11 @@ $( document ).ready(function() {
 var control = 0;
 var controlMobile = 0;
 var tempoScorrim = 1000;
+var controled = false;
+var controllang = false;
+var controlsport = false;
+var controlart = false;
+var introlife = 0;
 
 jQuery(document).ready(function(){
     function desktopOnly(){
@@ -165,6 +175,29 @@ jQuery(document).ready(function(){
               var line2 = "<div class='line' id='l"+Number(i+21)+"' style='left: "+Number(i*(100/56)+100/56*49)+"%' ></div>";
               $("#lifeline").append(line2);
           }
+
+          //lifeline click
+
+          $("#ed0").click(function() {
+            controled = !controled;
+            lifelineClick();
+          })
+
+          $("#lang0").click(function() {
+            controllang = !controllang;
+            lifelineClick();
+          })
+
+          $("#sport0").click(function() {
+            controlsport = !controlsport;
+            lifelineClick();
+          })
+
+          $("#art0").click(function() {
+            controlart = !controlart;
+            lifelineClick();
+          })
+
           // ---- EFFETTI HOVER ----
 
           //code enthusiast
@@ -260,6 +293,13 @@ jQuery(document).ready(function(){
     desktopOnly();
 });
 
+
+
+
+// ----- funzioni lifeline --------
+
+
+
 // --- compare la lifeline ---
 function horScrollSx() {
   $("#hi").animate({left: "-95%"}, tempoScorrim)
@@ -269,7 +309,10 @@ function horScrollSx() {
   $("#c-e").animate({left: "-51%"}, tempoScorrim)
   $("#wrapper-2").animate({left: "0%"}, tempoScorrim)
   control = 1;
-  $("#ed1").delay(tempoScorrim).animate({width: 100/56*13+"%"}, 500)
+  if(introlife == 0) {
+    lifelineAnimation();
+  } introlife = 1;
+
 }
 
 // --- scompare la lifeline ---
@@ -294,6 +337,74 @@ $("#frecciaB").click(function() {
     $(document).scrollTop(-$(document).height());
   }
 })
+
+function lifelineAnimation() {
+
+  if(introlife == 0) {
+    //animazione lifeline
+    $("#wrapper-2 > .linktext").delay(1000+tempoScorrim).fadeOut(200);
+    $("#lifeline").delay(1000+tempoScorrim).fadeIn();
+    controled = true;
+    $("#ed1").delay(1000+tempoScorrim).animate({width: 100/56*13+"%"}, 500)
+    $("#ed2").delay(1500+tempoScorrim).animate({width: 100/56*14+"%"}, 500)
+    $("#ed3").delay(2000+tempoScorrim).animate({width: 100/56*7+"%"}, 500)
+    $("#ed4").delay(2500+tempoScorrim).animate({width: 100/56*10+"%"}, 500)
+    lifelineClick();
+  }
+  setTimeout(function(){
+    controled = false;
+    controllang = true;
+    lifelineClick();
+    setTimeout(function(){
+      controllang = false;
+      controlsport = true;
+      lifelineClick();
+      setTimeout(function(){
+        controlsport = false;
+        controlart = true;
+        lifelineClick();
+      }, 2500)
+    }, 2500)
+  }, 4000+tempoScorrim)
+
+
+}
+
+function lifelineClick() {
+  if(controled == false) {
+    $("#ed > .quad").css({opacity: "0"})
+    $("#ed0").removeClass("yes")
+  } else {
+    $("#ed > .quad").css({opacity: "1"})
+    $("#ed0").addClass("yes")
+  }
+
+  if(controllang == false) {
+    $("#lang > .quad").css({opacity: "0"})
+    $("#lang0").removeClass("yes")
+  } else {
+    $("#lang > .quad").css({opacity: "1"})
+    $("#lang0").addClass("yes")
+  }
+
+  if(controlsport == false) {
+    $("#sport > .quad").css({opacity: "0"})
+    $("#sport0").removeClass("yes")
+  } else {
+    $("#sport > .quad").css({opacity: "1"})
+    $("#sport0").addClass("yes")
+  }
+
+  if(controlart == false) {
+    $("#art > .quad").css({opacity: "0"})
+    $("#art0").removeClass("yes")
+  } else {
+    $("#art > .quad").css({opacity: "1"})
+    $("#art0").addClass("yes")
+  }
+
+}
+
 
 
 </script>

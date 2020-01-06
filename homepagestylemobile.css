@@ -256,4 +256,8 @@
     bottom: 5%;
     position: absolute;
   }
+
+  #wrapper-2 {
+    display: none;
+  }
 }
