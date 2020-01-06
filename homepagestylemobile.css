@@ -249,10 +249,10 @@
     background-repeat: no-repeat;
   }
 
-  hr {
-    background: white;
-    width: 80%;
-    left: 10%;
+  #lineaM {
+    border-bottom: 1px solid white;
+    width: 70%;
+    left: 15%;
     bottom: 5%;
     position: absolute;
   }

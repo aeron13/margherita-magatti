@@ -312,4 +312,8 @@
     cursor: pointer;
   }
 
+  #wrapper3, #wrapper4, #wrapper5 {
+    display: none;
+  }
+
 }

@@ -136,6 +136,11 @@ var controllang = false;
 var controlsport = false;
 var controlart = false;
 var introlife = 0;
+var controlMobileCreate = 0;
+var controlDeskCreate = 0;
+var controlCe = 0;
+var controlnl = 0;
+var controlgd = 0;
 
 jQuery(document).ready(function(){
     function desktopOnly(){
@@ -143,6 +148,8 @@ jQuery(document).ready(function(){
         if(width > 768){
 
           // ---  solo su desktop ---
+
+          $("#wrapper-2").fadeIn(0);
 
           $(document).scroll(function(event){
              st = $(this).scrollTop();
@@ -161,19 +168,22 @@ jQuery(document).ready(function(){
           });
 
           // ---- LIFELINE ----
-          for(i=0; i<11; i++) {
-            var line1 = "<div class='line' id='l"+i+"' style='left: "+i*(100/56*3)+"%' ></div>";
-            $("#lifeline").append(line1);
-          }
+          if(controlDeskCreate == 0) {
+            for(i=0; i<11; i++) {
+              var line1 = "<div class='line' id='l"+i+"' style='left: "+i*(100/56*3)+"%' ></div>";
+              $("#lifeline").append(line1);
+            }
 
-          for(i=2; i<11; i++) {
-              var line2 = "<div class='line' id='l"+Number(i+10)+"' style='left: "+Number(i*(100/56*2)+100/56*28)+"%' ></div>";
-              $("#lifeline").append(line2);
-          }
+            for(i=2; i<11; i++) {
+                var line2 = "<div class='line' id='l"+Number(i+10)+"' style='left: "+Number(i*(100/56*2)+100/56*28)+"%' ></div>";
+                $("#lifeline").append(line2);
+            }
 
-          for(i=1; i<5; i++) {
-              var line2 = "<div class='line' id='l"+Number(i+21)+"' style='left: "+Number(i*(100/56)+100/56*49)+"%' ></div>";
-              $("#lifeline").append(line2);
+            for(i=1; i<5; i++) {
+                var line2 = "<div class='line' id='l"+Number(i+21)+"' style='left: "+Number(i*(100/56)+100/56*49)+"%' ></div>";
+                $("#lifeline").append(line2);
+            }
+            controlDeskCreate = 1;
           }
 
           //lifeline click
@@ -200,8 +210,6 @@ jQuery(document).ready(function(){
 
           // ---- EFFETTI HOVER ----
 
-          //code enthusiast
-          var controlCe = 0;
 
             $("#c-e").mouseover(function() {
               if(controlCe == 0) {
@@ -214,7 +222,6 @@ jQuery(document).ready(function(){
             })
 
             //nature lover
-            var controlnl = 0;
 
               $("#n-l").mouseover(function() {
                 if(controlnl == 0) {
@@ -227,7 +234,6 @@ jQuery(document).ready(function(){
               })
 
             //graphic designer
-            var controlgd = 0;
 
               $("#g-d").mouseover(function() {
                 if(controlgd == 0) {
@@ -242,22 +248,34 @@ jQuery(document).ready(function(){
 
         } else {
 
-          // ---  solo su mobile ---
+          // >>  --- SOLO SU MOBILE ---  <<
 
-          // --- link ---
+          $("#wrapper5, #wrapper3, #wrapper4").fadeIn(0);
 
-          var wrapper = "<div id='wrapper3' class='wrapper'></div><div id='wrapper4' class='wrapper'></div><div id='wrapper5' class='wrapper'></div>";
-          $("body").append(wrapper);
-          var projectsM = "<div id='projectsM' class='linksM'><div class='linktextM'><a>Discover my projects</a></div><p>Branding<br>Digital<br>Editorial<br>Illustration</p></div>"
-          $("#wrapper3").append(projectsM);
-          var gamesM = "<div id='gamesM' class='linksM'><h2>Try out my games!</h2><div class='linktextM'><a href='https://walkingthewire.altervista.org/'>WalkingTheWire</a></div><div class='linktextM'><a href='https://aeron13.github.io/momotaro/'>Momotaro</a></div></div>"
-          $("#wrapper4").append(gamesM);
-          var instaM = "<div id='instaM' class='linksM'><h2>Have a look at my landscape photos</h2><div class='linktextM'><a href='https://www.instagram.com/eilesselas13/'>Instagram</a></div></div>"
-          var linea = "<hr></hr>"
-          $("#wrapper5").append(instaM, linea);
+          // --- link --- (che si creano una volta sola)
+          if(controlMobileCreate == 0) {
 
-          var arrow = "<svg width='26.94' height='25.37' viewBox='0 0 26.94 25.37' class='arrowM'> <polygon class='cls-1' points='26.24 12.69 14.76 1.21 14.76 6.42 0.5 6.42 0.5 18.95 14.76 18.95 14.76 24.17 26.24 12.69'/> </svg>";
-          $(".linktextM").append(arrow);
+            var wrapper = "<div id='wrapper3' class='wrapper'></div><div id='wrapper4' class='wrapper'></div><div id='wrapper5' class='wrapper'></div>";
+            $("body").append(wrapper);
+            var projectsM = "<div id='projectsM' class='linksM'><div class='linktextM'><a>Discover my projects</a></div><p>Branding<br>Digital<br>Editorial<br>Illustration</p></div>"
+            $("#wrapper3").append(projectsM);
+            var gamesM = "<div id='gamesM' class='linksM'><h2>Try out my games!</h2><div class='linktextM'><a href='https://walkingthewire.altervista.org/'>WalkingTheWire</a></div><div class='linktextM'><a href='https://aeron13.github.io/momotaro/'>Momotaro</a></div></div>"
+            $("#wrapper4").append(gamesM);
+            $("#gamesM").click(function() {
+                window.location=$(this).find("a").attr("href"); return false; //link
+            })
+            var instaM = "<div id='instaM' class='linksM'><h2>Have a look at my landscape photos</h2><div class='linktextM'><a href='https://www.instagram.com/eilesselas13/'>Instagram</a></div></div>"
+            $("#gamesM").click(function() {
+                window.location=$(this).find("a").attr("href"); return false; //link
+            })
+            var linea = "<div id='lineaM'></div>"
+            $("#wrapper5").append(instaM, linea);
+
+            var arrow = "<svg width='26.94' height='25.37' viewBox='0 0 26.94 25.37' class='arrowM'> <polygon class='cls-1' points='26.24 12.69 14.76 1.21 14.76 6.42 0.5 6.42 0.5 18.95 14.76 18.95 14.76 24.17 26.24 12.69'/> </svg>";
+            $(".linktextM").append(arrow);
+
+            controlMobileCreate = 1;
+          }
 
           // --- effetti allo scroll ---
 
