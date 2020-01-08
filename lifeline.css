@@ -13,7 +13,7 @@
     position: absolute;
     top: 10%;
     left: 15%;
-    height: 85%;
+    height: 80%;
     width: 86%;
     display: none;
   }
@@ -73,7 +73,7 @@
     height: 3.7vh;
     line-height: 3.5vh;
     margin-bottom: 1vh;
-    padding-left: 0.4em;
+    padding-left: 1.2vh;
     width: 0;
 
   }
@@ -81,6 +81,7 @@
   .quad0 {
     cursor: pointer;
     border: 1px solid black;
+    padding-right: 1.2vh;
   }
 
   #ed > .quad {
@@ -116,7 +117,6 @@ opacity: 0;
     display: inline-block;
     top: 0 !important;
     width: max-content;
-    padding-right: 0.3em;
     background-color: black !important;
     right: 2%;
   }
@@ -151,7 +151,6 @@ opacity: 0;
     display: inline-block;
     top: -4.7vh !important;
     width: max-content;
-    padding-right: 0.3em;
     background-color: black !important;
     right: 2%;
     color: white !important;
@@ -184,7 +183,6 @@ opacity: 0;
     display: inline-block;
     top: calc(-4.7*2vh) !important;
     width: max-content;
-    padding-right: 0.3em;
     background-color: black !important;
     right: 2%;
   }
@@ -212,7 +210,6 @@ opacity: 0;
     display: inline-block;
     top: calc(-4.7*3vh) !important;
     width: max-content;
-    padding-right: 0.3em;
     background-color: black !important;
     right: 2%;
   }
