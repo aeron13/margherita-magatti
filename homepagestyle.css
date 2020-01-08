@@ -257,10 +257,10 @@
 
  .freccia {
     position: absolute;
-    bottom: 0%;
-    left: 230%;
-    width: 40%;
-    height: 30%;
+    bottom: 20%;
+    right: 10%;
+    width: 12%;
+    height: 3%;
     transform: translateY(-5px);
     fill: none;
     stroke: #fff;
