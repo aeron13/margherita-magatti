@@ -13,15 +13,15 @@
   }
 
   #wrapper3 {
-    top: 100vh;
+    top: 150vh;
   }
 
   #wrapper4 {
-    top: 200vh;
+    top: 250vh;
   }
 
   #wrapper5 {
-    top: 300vh;
+    top: 350vh;
   }
 
   #wrapper-1 {
@@ -190,7 +190,7 @@
   #g-d-wrapper {
     display: none;
     background-color: black;
-    position: absolute;
+    position: fixed;
     top: 10%;
     right: 0;
     width: 55%;
