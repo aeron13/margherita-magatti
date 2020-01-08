@@ -10,7 +10,7 @@
 <g id="Livello_2_1_">
 	<g id="i_m">
 		<g>
-			<rect x="0.5" y="0.5" class="st0" width="192.5" height="192.5"/>
+			<rect x="0" y="0" class="st0" width="192.5" height="192.5" shape-rendering="geometricPrecision" stroke-width="1"/>
 			<path d="M193.5,193.5H0V0h193.5V193.5z M1,192.5h191.5V1H1V192.5z"/>
 		</g>
 		<g class="st1">
