@@ -45,7 +45,7 @@
   .linktextM {
     background-color: black;
     position: relative;
-    border: 1px solid #1884AA;
+    outline: 1px solid #1884AA;
     display: inline-block;
     padding-left: 0.5em;
     padding-right: 1em;
@@ -63,7 +63,7 @@
   }
 
   #projectsM > .linktextM {
-    border: 1px solid #fff;
+    outline: 1px solid #fff;
     background-color: black;
     padding-left: 0.5em;
     display: inline-block;
@@ -99,7 +99,7 @@
   #gamesM {
     top: 50%;
     width: 70%;
-    border: 1px solid #EA382A;
+    outline: 1px solid #EA382A;
     display: inline-block;
   }
 
@@ -111,7 +111,7 @@
     left: 95%;
   }
   #gamesM > .linktextM {
-    border: 1px solid #EA382A;
+    outline: 1px solid #EA382A;
   }
 
   .linksM > h2 {
@@ -133,7 +133,7 @@
   #instaM {
     top: 50%;
     width: 70%;
-    border: 1px solid #1884AA;
+    outline: 1px solid #1884AA;
     display: inline-block;
   }
 
@@ -223,7 +223,7 @@
 
   #n-l {
     display: none;
-    border: 0.5px solid black;
+    outline: 0.5px solid black;
     position: absolute;
     top: 25%;
     left: -33.3%;

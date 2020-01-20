@@ -52,8 +52,8 @@
           <div id="ed0" class="quad0">Education</div>
           <div id="ed1" class="quad">Politecnico di Milano</div>
           <div id="ed2" class="quad">Scientific High School</div>
-          <div id="ed3" class="quad">  </div>
-          <div id="ed4" class="quad">  </div>
+          <div id="ed3" class="quad"></div>
+          <div id="ed4" class="quad"></div>
         </div>
         <div id="lang" class="container">
           <div id="lang0" class="quad0">Languages</div>
@@ -359,12 +359,12 @@ function lifelineAnimation() {
   if(introlife == 0) {
     //animazione lifeline
     $("#wrapper-2 > .linktext").delay(1000+tempoScorrim).fadeOut(200);
-    $("#lifeline").delay(1000+tempoScorrim).fadeIn();
+    $("#lifeline").delay(1500+tempoScorrim).toggle("slide", { direction: "down"}, 1000);
     controled = true;
-    $("#ed1").delay(1000+tempoScorrim).animate({width: 100/56*13+"%"}, 500)
-    $("#ed2").delay(1500+tempoScorrim).animate({width: 100/56*14+"%"}, 500)
-    $("#ed3").delay(2000+tempoScorrim).animate({width: 100/56*7+"%"}, 500)
-    $("#ed4").delay(2500+tempoScorrim).animate({width: 100/56*10+"%"}, 500)
+    /*$("#ed1").delay(2500+tempoScorrim).animate({width: 100/56*13+"%"}, 500)
+    $("#ed2").delay(3000+tempoScorrim).animate({opacity: "1", width: 100/56*14+"%"}, 500)
+    $("#ed3").delay(3500+tempoScorrim).animate({width: 100/56*7+"%"}, 500)
+    $("#ed4").delay(4000+tempoScorrim).animate({width: 100/56*10+"%"}, 500)*/
     lifelineClick();
   }
   setTimeout(function(){
