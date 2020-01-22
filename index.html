@@ -360,29 +360,37 @@ function lifelineAnimation() {
     //animazione lifeline
     $("#wrapper-2 > .linktext").delay(1000+tempoScorrim).fadeOut(200);
     $("#lifeline").delay(1500+tempoScorrim).toggle("slide", { direction: "down"}, 1000);
-    controled = true;
+
     /*$("#ed1").delay(2500+tempoScorrim).animate({width: 100/56*13+"%"}, 500)
     $("#ed2").delay(3000+tempoScorrim).animate({opacity: "1", width: 100/56*14+"%"}, 500)
     $("#ed3").delay(3500+tempoScorrim).animate({width: 100/56*7+"%"}, 500)
     $("#ed4").delay(4000+tempoScorrim).animate({width: 100/56*10+"%"}, 500)*/
-    lifelineClick();
+
   }
-  setTimeout(function(){
-    controled = false;
-    controllang = true;
+  setTimeout(function() {
+    controled = true;
+    $("#ed0").css({opacity: "1"});
     lifelineClick();
     setTimeout(function(){
-      controllang = false;
-      controlsport = true;
+      $("#lang0").css({opacity: "1"});
+      controled = false;
+      controllang = true;
       lifelineClick();
       setTimeout(function(){
-        controlsport = false;
-        controlart = true;
+        $("#sport0").css({opacity: "1"});
+        controllang = false;
+        controlsport = true;
         lifelineClick();
+        setTimeout(function(){
+          $("#art0").css({opacity: "1"});
+          controlsport = false;
+          controlart = true;
+          lifelineClick();
+        }, 2500)
       }, 2500)
     }, 2500)
-  }, 4000+tempoScorrim)
 
+  }, tempoScorrim+4000 )
 
 }
 

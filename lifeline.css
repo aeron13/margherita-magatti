@@ -119,6 +119,7 @@ opacity: 0;
     width: max-content;
     background-color: black !important;
     right: 2%;
+    opacity: 0;
   }
 
   #ed0.yes {
@@ -126,21 +127,22 @@ opacity: 0;
   }
 
   #ed1 {
-
+    width: calc(100/56*13%);
   }
 
   #ed2 {
     opacity: 0;
+    width: calc(100/56*14%);
     left: calc(100/56*14%);
   }
 
   #ed3 {
-
+    width: calc(100/56*7%);
     left: calc(100/56*29%);
   }
 
   #ed4 {
-
+    width: calc(100/56*10%);
     left: calc(100/56*37%);
   }
 
@@ -154,6 +156,7 @@ opacity: 0;
     background-color: black !important;
     right: 2%;
     color: white !important;
+    opacity: 0;
   }
 
   #lang0.yes {
@@ -185,6 +188,7 @@ opacity: 0;
     width: max-content;
     background-color: black !important;
     right: 2%;
+    opacity: 0;
   }
 
   #sport0.yes {
@@ -212,6 +216,7 @@ opacity: 0;
     width: max-content;
     background-color: black !important;
     right: 2%;
+    opacity: 0;
   }
 
   #art0.yes {
