@@ -257,7 +257,8 @@
     position: absolute;
   }
 
-  #wrapper-2 {
+  #wrapper-2, .links {
     display: none;
   }
+
 }

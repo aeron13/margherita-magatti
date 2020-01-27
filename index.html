@@ -22,11 +22,11 @@
       <div id="hi">
       </div>
       <div id="im">
-        <div id="n-l">
+        <div id="n-l" class="linkContainer">
         </div>
       </div>
       <div id="g-d-wrapper">
-        <div id="g-d">
+        <div id="g-d" class="linkContainer">
         </div>
         <svg width="84.04" height="19.35" viewBox="0 0 84.04 19.35" class="freccia" id="frecciaA">
           <polyline class="cls-1" points="63.52 0.72 81.59 18.35 0 18.35"/>
@@ -36,7 +36,7 @@
       </div>
       <div id="nome">
       </div>
-      <div id="c-e">
+      <div id="c-e" class="linkContainer">
       </div>
     </div>
 
@@ -95,6 +95,7 @@
 var iControl = 0;
 var timer;
 var st;
+var compariLinksTimer;
 
 //controlla l'apparsa degli elementi dell'intro
 function intro() {
@@ -114,9 +115,13 @@ function intro() {
             } else if (iControl == 6) {
               $("#frecciaA").delay(1200).fadeIn(200)
               clearTimeout(timer)
+              //iniziano a comparire i link
+              compariLinksTimer = setTimeout(compariLinks, 3200);
               }
     iControl = iControl + 1;
-  timer = setTimeout(intro, 500);
+    timer = setTimeout(intro, 500);
+
+  $(".links").addClass("normal")
 }
 
 $( document ).ready(function() {
@@ -187,6 +192,7 @@ jQuery(document).ready(function(){
           //lifeline click
 
           $("#ed0").click(function() {
+
             controled = !controled;
             lifelineClick();
           })
@@ -209,7 +215,7 @@ jQuery(document).ready(function(){
           // ---- EFFETTI HOVER ----
 
 
-            $("#c-e").mouseover(function() {
+
               if(controlCe == 0) {
                 var games = "<div id='games' class='links'><h2>Try out my games!</h2><div class='linktext'><a href='https://walkingthewire.altervista.org/'>WalkingTheWire</a></div><div class='linktext'><a href='https://aeron13.github.io/momotaro/'>Momotaro</a></div></div>"
                 $("#c-e").append(games);
@@ -217,11 +223,11 @@ jQuery(document).ready(function(){
                 $("#games > .linktext").append(arrow);
                 controlCe = 1;
               }
-            })
+
 
             //nature lover
 
-              $("#n-l").mouseover(function() {
+
                 if(controlnl == 0) {
                   var insta = "<div id='insta' class='links'><h2>Have a look at my landscape photos</h2><div class='linktext'><a href='https://www.instagram.com/eilesselas13/'>Instagram</a></div></div>"
                   $("#n-l").append(insta);
@@ -229,19 +235,19 @@ jQuery(document).ready(function(){
                   $("#insta > .linktext").append(arrow);
                   controlnl = 1;
                 }
-              })
+
 
             //graphic designer
 
-              $("#g-d").mouseover(function() {
+
                 if(controlgd == 0) {
-                  var projects = "<div id='projects' class='links'><div class='linktext'><a>Discover my projects</a></div><p>Branding<br>Digital<br>Editorial<br>Illustration</p></div>"
+                  var projects = "<div id='projects' class='links'><div class='linktext'><a href='https://www.behance.net/margheritamagatti'>Discover my projects</a></div><p>Branding<br>Digital<br>Editorial<br>Illustration</p></div>"
                   $("#g-d-wrapper").append(projects);
                   var arrow = "<svg width='26.94' height='25.37' viewBox='0 0 26.94 25.37' class='arrow'> <polygon class='cls-1' points='26.24 12.69 14.76 1.21 14.76 6.42 0.5 6.42 0.5 18.95 14.76 18.95 14.76 24.17 26.24 12.69'/> </svg>";
                   $("#projects > .linktext").append(arrow);
                   controlgd = 1;
                 }
-              })
+
 
 
         } else {
@@ -255,7 +261,7 @@ jQuery(document).ready(function(){
 
             var wrapper = "<div id='wrapper3' class='wrapper'></div><div id='wrapper4' class='wrapper'></div><div id='wrapper5' class='wrapper'></div>";
             $("body").append(wrapper);
-            var projectsM = "<div id='projectsM' class='linksM'><div class='linktextM'><a>Discover my projects</a></div><p>Branding<br>Digital<br>Editorial<br>Illustration</p></div>"
+            var projectsM = "<div id='projectsM' class='linksM'><div class='linktextM'><a href='https://www.behance.net/margheritamagatti'>Discover my projects</a></div><p>Branding<br>Digital<br>Editorial<br>Illustration</p></div>"
             $("#wrapper3").append(projectsM);
             var gamesM = "<div id='gamesM' class='linksM'><h2>Try out my games!</h2><div class='linktextM'><a href='https://walkingthewire.altervista.org/'>WalkingTheWire</a></div><div class='linktextM'><a href='https://aeron13.github.io/momotaro/'>Momotaro</a></div></div>"
             $("#wrapper4").append(gamesM);
@@ -263,9 +269,6 @@ jQuery(document).ready(function(){
                 window.location=$(this).find("a").attr("href"); return false; //link
             })
             var instaM = "<div id='instaM' class='linksM'><h2>Have a look at my landscape photos</h2><div class='linktextM'><a href='https://www.instagram.com/eilesselas13/'>Instagram</a></div></div>"
-            $("#gamesM").click(function() {
-                window.location=$(this).find("a").attr("href"); return false; //link
-            })
             var linea = "<div id='lineaM'></div>"
             $("#wrapper5").append(instaM, linea);
 
@@ -386,6 +389,7 @@ function lifelineAnimation() {
           controlsport = false;
           controlart = true;
           lifelineClick();
+          $("#frecciaB").fadeIn(200)
         }, 2500)
       }, 2500)
     }, 2500)
@@ -428,6 +432,63 @@ function lifelineClick() {
   }
 
 }
+
+
+
+//funzione che fa comparire da soli i links
+
+var mouseoverControl = 0;
+
+function compariLinks() {
+
+  var tempoCompari = 200;
+
+  if(mouseoverControl == 0) {
+    console.log("compariLinks")
+
+    $("#insta").removeClass("normal")
+    setTimeout(function() {
+      $("#insta").addClass("normal")
+    }, tempoCompari)
+
+    setTimeout(function() {
+
+      $("#games").removeClass("normal")
+      setTimeout(function() {
+        $("#games").addClass("normal")
+      }, tempoCompari)
+
+      setTimeout(function() {
+
+        $("#projects").removeClass("normal")
+        setTimeout(function() {
+          $("#projects").addClass("normal")
+        }, tempoCompari)
+        compariLinksTimer = setTimeout(compariLinks, 2000);
+
+      }, tempoCompari)
+    }, tempoCompari)
+
+  } else {
+    //quando i link sono già stati hoverati
+    clearTimeout(compariLinksTimer);
+  }
+
+}
+
+//la preview dei link mette di comparire quando vengono hoverati
+
+$(".linkContainer").mouseover(function() {
+
+  if(mouseoverControl == 0) {
+
+
+    $(".links").fadeIn(0).addClass("normal")
+
+    mouseoverControl = 1;
+  }
+
+})
 
 
 
