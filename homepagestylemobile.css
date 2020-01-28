@@ -223,7 +223,7 @@
 
   #n-l {
     display: none;
-    outline: 0.5px solid black;
+    outline: 1px solid black;
     position: absolute;
     top: 25%;
     left: -33.3%;
